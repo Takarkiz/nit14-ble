@@ -20,7 +20,7 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
     //ペリフェラルのプロパティ宣言
     var peripheral:CBPeripheral!
     
-    @IBOutlet var onoff:UILabel!
+    @IBOutlet var stateLabel:UILabel!
     //画像のプロパティの宣言
     @IBOutlet var imageView1:UIImageView!
     @IBOutlet var imageView2:UIImageView!
@@ -33,9 +33,11 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
     
     
     @IBOutlet var shiftLabel:UILabel!
+    @IBOutlet var byteLabel:UILabel!
     
     
-    //var timer:NSTimer!
+    var timer:NSTimer!
+    var count:Int = 0
     
     //BLEに接続時に画像を順に表示させるメソッド
     func cun(){
@@ -46,70 +48,63 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
         let imageRed:UIImage = UIImage(named:"formula_inst_1redbar.png")!
         //let base:UIImage = UIImage(named:"iPhone5_baseA")!
         
-        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(0.2 * Double(NSEC_PER_SEC)))
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
+        switch count{
+        case 0:
             self.imageView1.image = imageGreen
-        }
-        
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
+            break
+        case 1:
             self.imageView2.image = imageGreen
-        }
-        
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
+            break
+        case 2:
             self.imageView3.image = imageGreen
-        }
-        
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
+            break
+        case 3:
             self.imageView4.image = imageYellow
-        }
-        
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
+            break
+        case 4:
             self.imageView5.image = imageYellow
-        }
-        
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
+            break
+        case 5:
             self.imageView6.image = imageYellow
-        }
-        
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
+            break
+        case 6:
             self.imageView7.image = imageRed
-        }
-        
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
+            break
+        case 7:
             self.imageView8.image = imageRed
-        }
-        
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
+            break
+        case 10:
             self.imageView8.hidden = true
-        }
-        
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
+            break
+        case 11:
             self.imageView7.hidden = true
-        }
-        
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
+            break
+        case 12:
             self.imageView6.hidden = true
-        }
-        
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
+            break
+        case 13:
             self.imageView5.hidden = true
-        }
-        
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
+            break
+        case 14:
             self.imageView4.hidden = true
-        }
-        
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
+            break
+        case 15:
             self.imageView3.hidden = true
-        }
-        
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
+            break
+        case 16:
             self.imageView2.hidden = true
+            break
+        case 17:
+            self.imageView1.hidden = true
+            break
+        default:
+            break
+            
+            
         }
         
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
-            self.imageView1.hidden = true
-        }
+        count=count+1
+        
 
     }
     
@@ -118,7 +113,9 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        //        NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: #selector(ViewController.scanstart), userInfo: nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: Selector("cun"), userInfo: nil, repeats: true)
+        
+        //cun()
         
     }
     
@@ -136,11 +133,11 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
     ////////////////////////////////////////////////////////////////////////////////////
     @IBAction func scanstart(){
         
-        
+        //cun()
         //CBCentralManagerを初期化する
         centralManager = CBCentralManager(delegate:self,queue: nil, options:nil)
         
-        cun()
+        
         
     }
     
@@ -178,20 +175,23 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
         //ここでは欲しいシリアルのペリフェラルだけを取得
         if peripheral.name == "BLESerial2"{
             
-            print("pheripheral.name: \(peripheral.name)")
-            print("advertisementData:\(advertisementData)")
-            print("RSSI: \(RSSI)")
-            print("peripheral.identifier.UUIDString: \(peripheral.identifier.UUIDString)")
+//            print("pheripheral.name: \(peripheral.name)")
+//            print("advertisementData:\(advertisementData)")
+//            print("RSSI: \(RSSI)")
+//            print("peripheral.identifier.UUIDString: \(peripheral.identifier.UUIDString)")
             
             var name: NSString? = advertisementData["kCBAdvDataLocalName"] as? NSString
             if (name == nil) {
                 name = "no name";
+                
             }
             
             self.peripheral = peripheral
             
             //BLEデバイスが検出された時にペリフェラルの接続を開始する
             self.centralManager.connectPeripheral(self.peripheral, options:nil)
+        }else{
+            stateLabel.text = "未発見"
         }
         
     }
@@ -210,10 +210,12 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
         
         //スキャンを停止させる
         centralManager.stopScan()
+        stateLabel.text = "検出中"
     }
     //ペリフェラルの接続が失敗すると呼ばれる
     func centralManager(central: CBCentralManager, didFailToConnectPeripheral peripheral: CBPeripheral, error: NSError?) {
         print("接続失敗...")
+        stateLabel.text = "失敗"
     }
     
     //サービスが見つかった時に呼ばれるメソッド
@@ -268,8 +270,9 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
             characteristic.value?.getBytes(&byte, length: sizeof(NSInteger))
             
             print("byte:\(byte)")
+            byteLabel.text = String(byte)
             //            label.text = "\(byte)"
-            onoff.text = "接続"
+            stateLabel.text = "接続"
             
             
             //            if byte / 10 == 0 {
@@ -277,15 +280,18 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
             //            }
             
             let rpm:Int = byte / 10000000
-            
+            print(rpm)
+            rpmAnime(rpm)
             
             let shift:Int = byte / 1000000 - (rpm * 10)
             shiftLabel.text = String(shift)
             if shift == 0{
+                print("ニュートラル")
                 shiftLabel.text = "N"
             }
             
             let water:Int = byte / 1000 - (shift * 1000) - (rpm * 10000)
+            print(water)
             label.text = String(water)
             
         }
@@ -296,13 +302,14 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
     func peripheral(peripheral:CBPeripheral,didUpdateNotificationStateForCharacteristic characteristic:CBCharacteristic,error:NSError?){
         if error != nil{
             print("Notify状態更新失敗...error:\(error)")
-            onoff.text = "未接続"
+            stateLabel.text = "更新不可"
             
         }else{
             print("Notify状態更新成功! isNotifying:\(characteristic.isNotifying)")
             
             if characteristic.UUID.isEqual(CBUUID(string:"2A750D7D-BD9A-928F-B744-7D5A70CEF1F9")){
                 
+                stateLabel.text = "更新中"
                 //var byte:CUnsignedChar = 0
                 var byte:NSInteger = 0
                 
@@ -310,20 +317,20 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
                 characteristic.value?.getBytes(&byte, length: sizeof(NSInteger))
                 
                 print("byte:\(byte)")
-                //onoff.text = "\(byte)"
-                //shiftLabel.text = String(byte / 10)
                 
-                if byte / 10 == 0 {
+                //rpmを抽出
+                let rpm:Int = byte / 10000000
+                rpmAnime(rpm)
+                
+                //シフトレベルを抽出して表示
+                let shift:Int = byte / 1000000 - (rpm * 10)
+                shiftLabel.text = String(shift)
+                if shift == 0{
                     shiftLabel.text = "N"
                 }
                 
-                let rpm:Int = byte / 10000000
-                onoff.text = String(rpm)
-                
-                let shift:Int = byte / 1000000
-                shiftLabel.text = String(shift)
-                
-                let water:Int = byte / 1000
+                //水温を抽出して表示
+                let water:Int = byte / 1000 - (shift * 1000) - (rpm * 10000)
                 label.text = String(water)
                 
             }
@@ -333,7 +340,7 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
     }
     
     //RPMの画像貼る
-    func rmp(rpm:Int){
+    func rpmAnime(rpm:Int){
         
         let imageGreen:UIImage = UIImage(named:"formula_inst_1greenbar.png")!
         let imageYellow:UIImage = UIImage(named:"formula_inst_1yellowbar.png")!

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cT1-UT-4q9">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -8,11 +8,41 @@
         <mutableArray key="DSEG14Classic-Regular.ttf">
             <string>DSEG14Classic-Regular</string>
             <string>DSEG14Classic-Regular</string>
-            <string>DSEG14Classic-Regular</string>
-            <string>DSEG14Classic-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
+        <!--Start View Controller-->
+        <scene sceneID="B8M-8O-8aN">
+            <objects>
+                <viewController id="cT1-UT-4q9" customClass="StartViewController" customModule="nit_formula14" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tjd-5P-TXj"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zoo-jW-NOj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ytn-cF-fUh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1n-X0-Pqe">
+                                <rect key="frame" x="20" y="181" width="280" height="112"/>
+                                <state key="normal" title="Button" image="nit14-driveButton.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5w7-Bk-XFZ">
+                                <rect key="frame" x="33" y="351" width="255" height="102"/>
+                                <state key="normal" title="Button" image="nit14-pitButton.png"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toStart" id="ypg-Lg-lAK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bbf-Rs-zth" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-132" y="395"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -26,7 +56,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ko1-Vh-re2">
-                                <rect key="frame" x="3" y="55" width="32" height="75"/>
+                                <rect key="frame" x="0.0" y="55" width="35" height="75"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9as-7W-i6I">
                                 <rect key="frame" x="43" y="55" width="32" height="75"/>
@@ -37,43 +67,24 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pOy-Lg-4xV">
                                 <rect key="frame" x="123" y="55" width="32" height="75"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0k6-Y2-dBy">
-                                <rect key="frame" x="245" y="55" width="32" height="75"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NZp-eK-X6z">
                                 <rect key="frame" x="163" y="55" width="32" height="75"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ilg-PN-NCs">
                                 <rect key="frame" x="205" y="55" width="32" height="75"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0k6-Y2-dBy">
+                                <rect key="frame" x="245" y="55" width="32" height="75"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b1A-gl-8IH">
                                 <rect key="frame" x="285" y="55" width="32" height="75"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SHIFT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bwc-j5-jLn">
-                                <rect key="frame" x="115" y="175" width="90" height="24"/>
-                                <fontDescription key="fontDescription" name="DSEG14Classic-Regular" family="DSEG14 Classic" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBn-Oh-03L">
-                                <rect key="frame" x="10" y="446" width="185" height="114"/>
+                                <rect key="frame" x="-84" y="441" width="185" height="114"/>
                                 <fontDescription key="fontDescription" name="DSEG14Classic-Regular" family="DSEG14 Classic" pointSize="60"/>
                                 <color key="textColor" red="0.13389185855263158" green="0.46432976973684209" blue="0.87610505756578949" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WATER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1L-r6-rhp">
-                                <rect key="frame" x="20" y="441" width="90" height="24"/>
-                                <fontDescription key="fontDescription" name="DSEG14Classic-Regular" family="DSEG14 Classic" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yko-cr-nPk">
-                                <rect key="frame" x="108" y="367" width="114" height="66"/>
-                                <state key="normal" title="Start"/>
-                                <connections>
-                                    <action selector="scanstart" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hyg-DW-Agl"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="未接続" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Yv-Dq-h0Z">
                                 <rect key="frame" x="255" y="20" width="51" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -82,15 +93,29 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="N" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PrL-eg-3TH">
                                 <rect key="frame" x="50" y="200" width="221" height="185"/>
-                                <fontDescription key="fontDescription" name="DSEG14Classic-Regular" family="DSEG14 Classic" pointSize="80"/>
+                                <fontDescription key="fontDescription" name="DSEG14Classic-Regular" family="DSEG14 Classic" pointSize="160"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yko-cr-nPk">
+                                <rect key="frame" x="103" y="399" width="114" height="66"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="scanstart" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hyg-DW-Agl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="--------" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9O-ou-gzF">
+                                <rect key="frame" x="28" y="539" width="264" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="byteLabel" destination="R9O-ou-gzF" id="cdG-g9-4l1"/>
                         <outlet property="imageView1" destination="ko1-Vh-re2" id="MQZ-YW-Omx"/>
                         <outlet property="imageView2" destination="9as-7W-i6I" id="20O-ro-VKo"/>
                         <outlet property="imageView3" destination="rdQ-4q-Vm2" id="CV6-x4-rex"/>
@@ -100,13 +125,48 @@
                         <outlet property="imageView7" destination="0k6-Y2-dBy" id="PBg-wj-TPU"/>
                         <outlet property="imageView8" destination="b1A-gl-8IH" id="cgR-3D-xH0"/>
                         <outlet property="label" destination="vBn-Oh-03L" id="Zei-uy-IUJ"/>
-                        <outlet property="onoff" destination="4Yv-Dq-h0Z" id="AIe-O4-fR3"/>
                         <outlet property="shiftLabel" destination="PrL-eg-3TH" id="49K-mU-Qhr"/>
+                        <outlet property="stateLabel" destination="4Yv-Dq-h0Z" id="5GC-MB-HZT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="258" y="395"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="gdk-nN-xtv">
+            <objects>
+                <viewController id="VHE-aL-bNf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Zy-Rj-Pel"/>
+                        <viewControllerLayoutGuide type="bottom" id="Q7B-E3-aCR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kBA-NU-GHd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="×1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OwT-lg-VGk">
+                                <rect key="frame" x="33" y="391" width="254" height="149"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="120"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="パイロンimage.png" translatesAutoresizingMaskIntoConstraints="NO" id="HWV-fp-Y8F">
+                                <rect key="frame" x="0.0" y="54" width="320" height="292"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wFm-Sy-HoM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="626" y="395"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="nit14-driveButton.png" width="700" height="300"/>
+        <image name="nit14-pitButton.png" width="700" height="300"/>
+        <image name="パイロンimage.png" width="480" height="480"/>
+    </resources>
 </document>
