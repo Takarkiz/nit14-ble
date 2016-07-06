@@ -28,7 +28,6 @@ class StartViewController: UIViewController {
     
     @IBAction func pit(){
         self.performSegueWithIdentifier("toPit", sender: nil)
-        
     }
     
 
