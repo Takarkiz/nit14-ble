@@ -26,10 +26,16 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1n-X0-Pqe">
                                 <rect key="frame" x="20" y="181" width="280" height="112"/>
                                 <state key="normal" title="Button" image="nit14-driveButton.png"/>
+                                <connections>
+                                    <action selector="drive" destination="cT1-UT-4q9" eventType="touchUpInside" id="SZq-5r-npf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5w7-Bk-XFZ">
                                 <rect key="frame" x="33" y="351" width="255" height="102"/>
                                 <state key="normal" title="Button" image="nit14-pitButton.png"/>
+                                <connections>
+                                    <action selector="pit" destination="cT1-UT-4q9" eventType="touchUpInside" id="UIW-F5-3Ih"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -110,6 +116,12 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Volt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGr-T4-S4g">
+                                <rect key="frame" x="139" y="535" width="42" height="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -132,6 +144,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="258" y="395"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gv4-Nm-dm1">
+            <objects>
+                <viewController id="bEW-rV-hrR" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3OH-7J-SgQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="71d-Eb-8Vc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mbs-aE-VPo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nOC-bh-GBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="258" y="1030"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gdk-nN-xtv">

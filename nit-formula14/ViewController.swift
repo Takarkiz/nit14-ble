@@ -107,15 +107,16 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
         
 
     }
-    
+     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: Selector("cun"), userInfo: nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: #selector(ViewController.cun), userInfo: nil, repeats: true)
         
-        //cun()
+        //
+        print("Driveモード")
         
     }
     

@@ -11,6 +11,7 @@
 		3C0AB8651D2CD68D00D15758 /* nit14-driveButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C0AB8641D2CD68D00D15758 /* nit14-driveButton.png */; };
 		3C0AB8671D2CD69600D15758 /* nit14-pitButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C0AB8661D2CD69600D15758 /* nit14-pitButton.png */; };
 		3C0AB8691D2CD75400D15758 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0AB8681D2CD75400D15758 /* StartViewController.swift */; };
+		3CC400C31D325062009EDAA1 /* PitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC400C21D325062009EDAA1 /* PitViewController.swift */; };
 		3CF7C8B61CAFA3320013EC10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF7C8B51CAFA3320013EC10 /* AppDelegate.swift */; };
 		3CF7C8B81CAFA3320013EC10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF7C8B71CAFA3320013EC10 /* ViewController.swift */; };
 		3CF7C8BB1CAFA3320013EC10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CF7C8B91CAFA3320013EC10 /* Main.storyboard */; };
@@ -155,6 +156,7 @@
 		3C0AB8641D2CD68D00D15758 /* nit14-driveButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nit14-driveButton.png"; sourceTree = "<group>"; };
 		3C0AB8661D2CD69600D15758 /* nit14-pitButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "nit14-pitButton.png"; path = "../../../formula/N.I.T 14/計器用画像など/nit14-pitButton.png"; sourceTree = "<group>"; };
 		3C0AB8681D2CD75400D15758 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		3CC400C21D325062009EDAA1 /* PitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitViewController.swift; sourceTree = "<group>"; };
 		3CF7C8B21CAFA3320013EC10 /* nit-formula14.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nit-formula14.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CF7C8B51CAFA3320013EC10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CF7C8B71CAFA3320013EC10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 				3CF7C8B51CAFA3320013EC10 /* AppDelegate.swift */,
 				3C0AB8681D2CD75400D15758 /* StartViewController.swift */,
 				3CF7C8B71CAFA3320013EC10 /* ViewController.swift */,
+				3CC400C21D325062009EDAA1 /* PitViewController.swift */,
 				3CF7C8B91CAFA3320013EC10 /* Main.storyboard */,
 				3CF7C8BC1CAFA3320013EC10 /* Assets.xcassets */,
 				3CF7C8BE1CAFA3320013EC10 /* LaunchScreen.storyboard */,
@@ -894,6 +897,7 @@
 			files = (
 				3CF7C8B81CAFA3320013EC10 /* ViewController.swift in Sources */,
 				3CF7C8B61CAFA3320013EC10 /* AppDelegate.swift in Sources */,
+				3CC400C31D325062009EDAA1 /* PitViewController.swift in Sources */,
 				3C0AB8691D2CD75400D15758 /* StartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
