@@ -11,6 +11,18 @@
 		3C0AB8651D2CD68D00D15758 /* nit14-driveButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C0AB8641D2CD68D00D15758 /* nit14-driveButton.png */; };
 		3C0AB8671D2CD69600D15758 /* nit14-pitButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C0AB8661D2CD69600D15758 /* nit14-pitButton.png */; };
 		3C0AB8691D2CD75400D15758 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0AB8681D2CD75400D15758 /* StartViewController.swift */; };
+		3CB7D8091D4A1046006236B6 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 3CB7D7FD1D4A1046006236B6 /* Contents.json */; };
+		3CB7D80A1D4A1046006236B6 /* nitapp-icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB7D7FE1D4A1046006236B6 /* nitapp-icon-29.png */; };
+		3CB7D80B1D4A1046006236B6 /* nitapp-icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB7D7FF1D4A1046006236B6 /* nitapp-icon-29@2x.png */; };
+		3CB7D80C1D4A1046006236B6 /* nitapp-icon-29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB7D8001D4A1046006236B6 /* nitapp-icon-29@3x.png */; };
+		3CB7D80D1D4A1046006236B6 /* nitapp-icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB7D8011D4A1046006236B6 /* nitapp-icon-40.png */; };
+		3CB7D80E1D4A1046006236B6 /* nitapp-icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB7D8021D4A1046006236B6 /* nitapp-icon-40@2x.png */; };
+		3CB7D80F1D4A1046006236B6 /* nitapp-icon-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB7D8031D4A1046006236B6 /* nitapp-icon-40@3x.png */; };
+		3CB7D8101D4A1046006236B6 /* nitapp-icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB7D8041D4A1046006236B6 /* nitapp-icon-60@2x.png */; };
+		3CB7D8111D4A1046006236B6 /* nitapp-icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB7D8051D4A1046006236B6 /* nitapp-icon-60@3x.png */; };
+		3CB7D8121D4A1046006236B6 /* nitapp-icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB7D8061D4A1046006236B6 /* nitapp-icon-76.png */; };
+		3CB7D8131D4A1046006236B6 /* nitapp-icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB7D8071D4A1046006236B6 /* nitapp-icon-76@2x.png */; };
+		3CB7D8141D4A1046006236B6 /* nitapp-icon-83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB7D8081D4A1046006236B6 /* nitapp-icon-83.5@2x.png */; };
 		3CC400C31D325062009EDAA1 /* PitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC400C21D325062009EDAA1 /* PitViewController.swift */; };
 		3CF7C8B61CAFA3320013EC10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF7C8B51CAFA3320013EC10 /* AppDelegate.swift */; };
 		3CF7C8B81CAFA3320013EC10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF7C8B71CAFA3320013EC10 /* ViewController.swift */; };
@@ -156,6 +168,18 @@
 		3C0AB8641D2CD68D00D15758 /* nit14-driveButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nit14-driveButton.png"; sourceTree = "<group>"; };
 		3C0AB8661D2CD69600D15758 /* nit14-pitButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "nit14-pitButton.png"; path = "../../../formula/N.I.T 14/計器用画像など/nit14-pitButton.png"; sourceTree = "<group>"; };
 		3C0AB8681D2CD75400D15758 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		3CB7D7FD1D4A1046006236B6 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		3CB7D7FE1D4A1046006236B6 /* nitapp-icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nitapp-icon-29.png"; sourceTree = "<group>"; };
+		3CB7D7FF1D4A1046006236B6 /* nitapp-icon-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nitapp-icon-29@2x.png"; sourceTree = "<group>"; };
+		3CB7D8001D4A1046006236B6 /* nitapp-icon-29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nitapp-icon-29@3x.png"; sourceTree = "<group>"; };
+		3CB7D8011D4A1046006236B6 /* nitapp-icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nitapp-icon-40.png"; sourceTree = "<group>"; };
+		3CB7D8021D4A1046006236B6 /* nitapp-icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nitapp-icon-40@2x.png"; sourceTree = "<group>"; };
+		3CB7D8031D4A1046006236B6 /* nitapp-icon-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nitapp-icon-40@3x.png"; sourceTree = "<group>"; };
+		3CB7D8041D4A1046006236B6 /* nitapp-icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nitapp-icon-60@2x.png"; sourceTree = "<group>"; };
+		3CB7D8051D4A1046006236B6 /* nitapp-icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nitapp-icon-60@3x.png"; sourceTree = "<group>"; };
+		3CB7D8061D4A1046006236B6 /* nitapp-icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nitapp-icon-76.png"; sourceTree = "<group>"; };
+		3CB7D8071D4A1046006236B6 /* nitapp-icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nitapp-icon-76@2x.png"; sourceTree = "<group>"; };
+		3CB7D8081D4A1046006236B6 /* nitapp-icon-83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nitapp-icon-83.5@2x.png"; sourceTree = "<group>"; };
 		3CC400C21D325062009EDAA1 /* PitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PitViewController.swift; sourceTree = "<group>"; };
 		3CF7C8B21CAFA3320013EC10 /* nit-formula14.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nit-formula14.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CF7C8B51CAFA3320013EC10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -310,6 +334,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3CB7D7FC1D4A1046006236B6 /* AppIcon.appiconset */ = {
+			isa = PBXGroup;
+			children = (
+				3CB7D7FD1D4A1046006236B6 /* Contents.json */,
+				3CB7D7FE1D4A1046006236B6 /* nitapp-icon-29.png */,
+				3CB7D7FF1D4A1046006236B6 /* nitapp-icon-29@2x.png */,
+				3CB7D8001D4A1046006236B6 /* nitapp-icon-29@3x.png */,
+				3CB7D8011D4A1046006236B6 /* nitapp-icon-40.png */,
+				3CB7D8021D4A1046006236B6 /* nitapp-icon-40@2x.png */,
+				3CB7D8031D4A1046006236B6 /* nitapp-icon-40@3x.png */,
+				3CB7D8041D4A1046006236B6 /* nitapp-icon-60@2x.png */,
+				3CB7D8051D4A1046006236B6 /* nitapp-icon-60@3x.png */,
+				3CB7D8061D4A1046006236B6 /* nitapp-icon-76.png */,
+				3CB7D8071D4A1046006236B6 /* nitapp-icon-76@2x.png */,
+				3CB7D8081D4A1046006236B6 /* nitapp-icon-83.5@2x.png */,
+			);
+			path = AppIcon.appiconset;
+			sourceTree = "<group>";
+		};
 		3CF7C8A91CAFA3320013EC10 = {
 			isa = PBXGroup;
 			children = (
@@ -346,6 +389,7 @@
 				3CF7C8BC1CAFA3320013EC10 /* Assets.xcassets */,
 				3CF7C8BE1CAFA3320013EC10 /* LaunchScreen.storyboard */,
 				3CF7C8C11CAFA3320013EC10 /* Info.plist */,
+				3CB7D7FC1D4A1046006236B6 /* AppIcon.appiconset */,
 			);
 			path = "nit-formula14";
 			sourceTree = "<group>";
@@ -719,6 +763,7 @@
 				3CF7C9AF1CAFA5980013EC10 /* DSEG14Modern-LightItalic.ttf in Resources */,
 				3CF7C9631CAFA5980013EC10 /* DSEG7Classic-Italic.ttf in Resources */,
 				3CF7C9B41CAFA5980013EC10 /* DSEG14ModernMini-Bold.woff in Resources */,
+				3CB7D8091D4A1046006236B6 /* Contents.json in Resources */,
 				3CF7C9C11CAFACBC0013EC10 /* iPhone5_baseA.png in Resources */,
 				3CF7C9B11CAFA5980013EC10 /* DSEG14Modern-Regular.ttf in Resources */,
 				3CF7C9B71CAFA5980013EC10 /* DSEG14ModernMini-Italic.ttf in Resources */,
@@ -731,9 +776,12 @@
 				3CF7C9781CAFA5980013EC10 /* DSEG7Modern-Bold.woff in Resources */,
 				3CF7C99F1CAFA5980013EC10 /* DSEG14ClassicMini-Italic.ttf in Resources */,
 				3CF7C98D1CAFA5980013EC10 /* DSEG7ModernMini-Regular.ttf in Resources */,
+				3CB7D8131D4A1046006236B6 /* nitapp-icon-76@2x.png in Resources */,
+				3CB7D80F1D4A1046006236B6 /* nitapp-icon-40@3x.png in Resources */,
 				3CF7CA071CB64BD40013EC10 /* Default-568h@2x.png in Resources */,
 				3CF7C96A1CAFA5980013EC10 /* DSEG7Classic-Regular.woff in Resources */,
 				3CF7CA081CB64BD40013EC10 /* Default-667h@2x.png in Resources */,
+				3CB7D8111D4A1046006236B6 /* nitapp-icon-60@3x.png in Resources */,
 				3CF7C96C1CAFA5980013EC10 /* DSEG7ClassicMini-Bold.woff in Resources */,
 				3C0AB8671D2CD69600D15758 /* nit14-pitButton.png in Resources */,
 				3C0AB8651D2CD68D00D15758 /* nit14-driveButton.png in Resources */,
@@ -745,6 +793,7 @@
 				3CF7C9B01CAFA5980013EC10 /* DSEG14Modern-LightItalic.woff in Resources */,
 				3CF7C9681CAFA5980013EC10 /* DSEG7Classic-LightItalic.woff in Resources */,
 				3CF7C9831CAFA5980013EC10 /* DSEG7ModernMini-Bold.ttf in Resources */,
+				3CB7D80B1D4A1046006236B6 /* nitapp-icon-29@2x.png in Resources */,
 				3CF7C9AA1CAFA5980013EC10 /* DSEG14Modern-BoldItalic.woff in Resources */,
 				3CF7C9BA1CAFA5980013EC10 /* DSEG14ModernMini-Light.woff in Resources */,
 				3CF7C96E1CAFA5980013EC10 /* DSEG7ClassicMini-BoldItalic.woff in Resources */,
@@ -754,7 +803,9 @@
 				3CF7C9A71CAFA5980013EC10 /* DSEG14Modern-Bold.ttf in Resources */,
 				3CF7C98E1CAFA5980013EC10 /* DSEG7ModernMini-Regular.woff in Resources */,
 				3CF7C97D1CAFA5980013EC10 /* DSEG7Modern-Light.ttf in Resources */,
+				3CB7D80C1D4A1046006236B6 /* nitapp-icon-29@3x.png in Resources */,
 				3CF7C9B81CAFA5980013EC10 /* DSEG14ModernMini-Italic.woff in Resources */,
+				3CB7D80A1D4A1046006236B6 /* nitapp-icon-29.png in Resources */,
 				3CF7C97A1CAFA5980013EC10 /* DSEG7Modern-BoldItalic.woff in Resources */,
 				3CF7C8EA1CAFA3D20013EC10 /* formula_inst_1redbar.png in Resources */,
 				3CF7C9951CAFA5980013EC10 /* DSEG14Classic-Light.ttf in Resources */,
@@ -784,8 +835,10 @@
 				3CF7C9881CAFA5980013EC10 /* DSEG7ModernMini-Italic.woff in Resources */,
 				3CF7C9A31CAFA5980013EC10 /* DSEG14ClassicMini-LightItalic.ttf in Resources */,
 				3CF7C95E1CAFA5980013EC10 /* DSEG7SEGGCHANMINI-Regular.woff in Resources */,
+				3CB7D80D1D4A1046006236B6 /* nitapp-icon-40.png in Resources */,
 				3CF7C9BB1CAFA5980013EC10 /* DSEG14ModernMini-LightItalic.ttf in Resources */,
 				3CF7C9911CAFA5980013EC10 /* DSEG14Classic-BoldItalic.ttf in Resources */,
+				3CB7D8121D4A1046006236B6 /* nitapp-icon-76.png in Resources */,
 				3CF7C9741CAFA5980013EC10 /* DSEG7ClassicMini-LightItalic.woff in Resources */,
 				3CF7C99B1CAFA5980013EC10 /* DSEG14ClassicMini-Bold.ttf in Resources */,
 				3CF7C9B61CAFA5980013EC10 /* DSEG14ModernMini-BoldItalic.woff in Resources */,
@@ -808,16 +861,19 @@
 				3CF7C9651CAFA5980013EC10 /* DSEG7Classic-Light.ttf in Resources */,
 				3CF7C9A11CAFA5980013EC10 /* DSEG14ClassicMini-Light.ttf in Resources */,
 				3CF7C96F1CAFA5980013EC10 /* DSEG7ClassicMini-Italic.ttf in Resources */,
+				3CB7D80E1D4A1046006236B6 /* nitapp-icon-40@2x.png in Resources */,
 				3CF7C9701CAFA5980013EC10 /* DSEG7ClassicMini-Italic.woff in Resources */,
 				3CF7C9791CAFA5980013EC10 /* DSEG7Modern-BoldItalic.ttf in Resources */,
 				3CF7C9941CAFA5980013EC10 /* DSEG14Classic-Italic.woff in Resources */,
 				3CF7C95B1CAFA5980013EC10 /* DSEG7SEGGCHAN-Regular.ttf in Resources */,
 				3CF7C9991CAFA5980013EC10 /* DSEG14Classic-Regular.ttf in Resources */,
 				3CF7C9AE1CAFA5980013EC10 /* DSEG14Modern-Light.woff in Resources */,
+				3CB7D8141D4A1046006236B6 /* nitapp-icon-83.5@2x.png in Resources */,
 				3CF7C98B1CAFA5980013EC10 /* DSEG7ModernMini-LightItalic.ttf in Resources */,
 				3CF7C99A1CAFA5980013EC10 /* DSEG14Classic-Regular.woff in Resources */,
 				3CF7C97C1CAFA5980013EC10 /* DSEG7Modern-Italic.woff in Resources */,
 				3CF7C97B1CAFA5980013EC10 /* DSEG7Modern-Italic.ttf in Resources */,
+				3CB7D8101D4A1046006236B6 /* nitapp-icon-60@2x.png in Resources */,
 				3CF7C9AB1CAFA5980013EC10 /* DSEG14Modern-Italic.ttf in Resources */,
 				3CF7C8BB1CAFA3320013EC10 /* Main.storyboard in Resources */,
 				3CF7C9981CAFA5980013EC10 /* DSEG14Classic-LightItalic.woff in Resources */,

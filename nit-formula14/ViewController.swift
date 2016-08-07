@@ -12,6 +12,8 @@ import UIKit
 class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDelegate {
     
     @IBOutlet var label:UILabel!
+    @IBOutlet var voltLabel:UILabel!
+    
     
     let cbserviceUUID = "BD011F22-7D3C-0DB6-E441-55873D44EF40"
     let charactaUUID = "2A750D7D-BD9A-928F-B744-7D5A70CEF1F9"
@@ -41,7 +43,7 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
     
     //BLEに接続時に画像を順に表示させるメソッド
     func cun(){
-
+        
         
         let imageGreen:UIImage = UIImage(named:"formula_inst_1greenbar.png")!
         let imageYellow:UIImage = UIImage(named:"formula_inst_1yellowbar.png")!
@@ -105,9 +107,9 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
         
         count=count+1
         
-
+        
     }
-     
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -117,6 +119,7 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
         
         //
         print("Driveモード")
+        
         
     }
     
@@ -176,10 +179,10 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
         //ここでは欲しいシリアルのペリフェラルだけを取得
         if peripheral.name == "BLESerial2"{
             
-//            print("pheripheral.name: \(peripheral.name)")
-//            print("advertisementData:\(advertisementData)")
-//            print("RSSI: \(RSSI)")
-//            print("peripheral.identifier.UUIDString: \(peripheral.identifier.UUIDString)")
+            //            print("pheripheral.name: \(peripheral.name)")
+            //            print("advertisementData:\(advertisementData)")
+            //            print("RSSI: \(RSSI)")
+            //            print("peripheral.identifier.UUIDString: \(peripheral.identifier.UUIDString)")
             
             var name: NSString? = advertisementData["kCBAdvDataLocalName"] as? NSString
             if (name == nil) {
@@ -276,24 +279,55 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
             stateLabel.text = "接続"
             
             
-            //            if byte / 10 == 0 {
+            //            let rpm:Int = byte / 10000000
+            //            print("rpm:\(rpm)")
+            //            rpmAnime(rpm)
+            //
+            //            let shift:Int = byte / 1000000 - (rpm * 10)
+            //            shiftLabel.text = String(shift)
+            //            if shift == 0{
+            //                print("ニュートラル")
             //                shiftLabel.text = "N"
+            //            }else{
+            //                print("シフト:\(shift)")
+            //            }
+            //
+            //            let water:Int = byte / 1000 - (shift * 1000) - (rpm * 10000)
+            //            print("水温:\(water)")
+            //            label.text = String(water)
+            //            if water == 115{
+            //                self.view.backgroundColor = UIColor.redColor()
+            //            }else{
+            //                self.view.backgroundColor = UIColor.blackColor()
             //            }
             
-            let rpm:Int = byte / 10000000
-            print(rpm)
-            rpmAnime(rpm)
-            
-            let shift:Int = byte / 1000000 - (rpm * 10)
-            shiftLabel.text = String(shift)
-            if shift == 0{
-                print("ニュートラル")
-                shiftLabel.text = "N"
+            if byte >= 200{
+                let rpm:Int = (byte - 200) / 10
+                print("rpm:\(rpm)")
+                rpmAnime(rpm)
+                
+                let shift:Int = byte - 200 - rpm
+                print("シフト:\(shift)")
+                shiftLabel.text = String(shift)
+                if shift == 6{
+                    shiftLabel.text = "N"
+                }
+                
+            }else if byte >= 0 && byte <= 120{
+                let water:Int = byte
+                print("水温:\(water)")
+                label.text = String(water)
+                
+                if water > 100{
+                    self.view.backgroundColor = UIColor.redColor()
+                }else{
+                    self.view.backgroundColor = UIColor.blackColor()
+                }
+            }else if byte >= 120 && byte <= 150{
+                let volt:Float = Float(byte) / 10
+                print("電圧:\(volt)")
+                voltLabel.text = String(volt)
             }
-            
-            let water:Int = byte / 1000 - (shift * 1000) - (rpm * 10000)
-            print(water)
-            label.text = String(water)
             
         }
     }
@@ -318,27 +352,63 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
                 characteristic.value?.getBytes(&byte, length: sizeof(NSInteger))
                 
                 print("byte:\(byte)")
+                byteLabel.text = String(byte)
+                //            label.text = "\(byte)"
+                stateLabel.text = "接続"
                 
-                //rpmを抽出
-                let rpm:Int = byte / 10000000
-                rpmAnime(rpm)
                 
-                //シフトレベルを抽出して表示
-                let shift:Int = byte / 1000000 - (rpm * 10)
-                shiftLabel.text = String(shift)
-                if shift == 0{
-                    shiftLabel.text = "N"
+                //                let rpm:Int = byte / 10000000
+                //                print("rpm:\(rpm)")
+                //                rpmAnime(rpm)
+                //
+                //                let shift:Int = byte / 1000000 - (rpm * 10)
+                //                shiftLabel.text = String(shift)
+                //                if shift == 6{
+                //                    print("ニュートラル")
+                //                    shiftLabel.text = "N"
+                //                }else if shift == 7{
+                //                    print("シフトの値を読み取れませんでした．")
+                //                }else{
+                //                    print("シフト:\(shift)")
+                //                }
+                //                let water:Int = Int(byte / 1000) - (shift * 1000) - (rpm * 10000)
+                //                print("水温:\(water)")
+                //                label.text = String(water)
+                
+                
+                if byte >= 200{
+                    let rpm:Int = (byte - 200) / 10
+                    print("rpm:\(rpm)")
+                    rpmAnime(rpm)
+                    
+                    let shift:Int = byte - 200 - rpm
+                    print("シフト:\(shift)")
+                    shiftLabel.text = String(shift)
+                    if shift == 6{
+                        shiftLabel.text = "N"
+                    }
+                    
+                }else if byte >= 0 && byte <= 120{
+                    let water:Int = byte
+                    print("水温:\(water)")
+                    label.text = String(water)
+                    
+                    if water > 100{
+                        self.view.backgroundColor = UIColor.redColor()
+                    }else{
+                        self.view.backgroundColor = UIColor.blackColor()
+                    }
+                }else if byte >= 120 && byte <= 150{
+                    let volt:Float = Float(byte) / 10
+                    print("電圧:\(volt)")
+                    voltLabel.text = String(volt)
                 }
-                
-                //水温を抽出して表示
-                let water:Int = byte / 1000 - (shift * 1000) - (rpm * 10000)
-                label.text = String(water)
-                
             }
             
             
         }
     }
+
     
     //RPMの画像貼る
     func rpmAnime(rpm:Int){
@@ -406,9 +476,4 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
     }
     
     
-    
-    
-    
-    
 }
-
